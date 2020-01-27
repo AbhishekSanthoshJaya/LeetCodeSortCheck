@@ -8,10 +8,11 @@ public class StudnetMainClass {
 
     public boolean nonDec(int[] nums) {
         int count = 0;
+        int count2 = 0;
         for (int i = 0; i < nums.length-1; i++) {
             for (int j = i + 1; j < nums.length - 1; j++) {
                 if (nums[i] < nums[j]) {
-                    return true;
+                    count2++;
                 }
                 else if (nums[i] >= nums[j]) {
                     count++;
@@ -21,6 +22,6 @@ public class StudnetMainClass {
         if (count >= 2) {
             return false;
         }
-        else return true;
+        else if (count2 <= nums.length-1) return true;
     }
 }
